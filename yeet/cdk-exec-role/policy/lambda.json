@@ -1,0 +1,29 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$account"
+        }
+      },
+      "Action": [
+        "lambda:AddPermission",
+        "lambda:CreateCodeSigningConfig",
+        "lambda:CreateEventSourceMapping",
+        "lambda:CreateFunction",
+        "lambda:GetCodeSigningConfig",
+        "lambda:GetEventSourceMapping",
+        "lambda:GetFunction",
+        "lambda:GetFunctionCodeSigningConfig",
+        "lambda:GetLayerVersion",
+        "lambda:GetRuntimeManagementConfig",
+        "lambda:PublishLayerVersion",
+        "lambda:InvokeFunction",
+        "lambda:TagResource"
+      ],
+      "Resource": [ "*" ],
+      "Effect": "Allow"
+    }
+  ]
+}

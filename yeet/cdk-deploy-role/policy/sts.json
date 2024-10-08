@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$account"
+        }
+      },
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam::$account:role/tinstafl-exec-$alias",
+      "Effect": "Allow"
+    },
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$account"
+        }
+      },
+      "Action": "sts:GetCallerIdentity",
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

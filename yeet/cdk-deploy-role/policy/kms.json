@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "kms:ViaService": "s3.$region.amazonaws.com",
+          "aws:PrincipalAccount": "$account",
+          "kms:CallerAlias": "alias/tinstafl-$alias"
+        }
+      },
+      "Action": [
+        "kms:Decrypt",
+        "kms:DescribeKey",
+        "kms:Encrypt",
+        "kms:GenerateDataKey*",
+        "kms:ReEncrypt*"
+      ],
+      "Resource": "*",
+      "Effect": "Allow"
+    }
+  ]
+}

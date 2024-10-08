@@ -1,0 +1,30 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$account"
+        }
+      },
+      "Action": [
+        "sqs:AddPermission",
+        "sqs:ChangeMessageVisibility",
+        "sqs:CreateQueue",
+        "sqs:GetQueueAttributes",
+        "sqs:GetQueueUrl",
+        "sqs:ListDeadLetterSourceQueues",
+        "sqs:ListMessageMoveTasks",
+        "sqs:ListQueueTags",
+        "sqs:ListQueues",
+        "sqs:ReceiveMessage",
+        "sqs:SendMessage",
+        "sqs:SetQueueAttributes",
+        "sqs:StartMessageMoveTask",
+        "sqs:TagQueue"
+      ],
+      "Resource": [ "*" ],
+      "Effect": "Allow"
+    }
+  ]
+}

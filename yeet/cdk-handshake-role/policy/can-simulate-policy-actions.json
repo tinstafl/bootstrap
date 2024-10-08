@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$account"
+        }
+      },
+      "Action": "iam:SimulatePrincipalPolicy",
+      "Resource": [
+        "arn:aws:iam::$account:role/tinstafl-deploy-$alias",
+        "arn:aws:iam::$account:role/tinstafl-exec-$alias",
+        "arn:aws:iam::$account:role/tinstafl-assets-$alias",
+        "arn:aws:iam::$account:role/tinstafl-images-$alias",
+        "arn:aws:iam::$account:role/tinstafl-lookup-$alias"
+      ],
+      "Effect": "Allow"
+    }
+  ]
+}
