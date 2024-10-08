@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$ACCOUNT"
+        }
+      },
+      "Action": [
+        "events:PutRule",
+        "events:PutTargets",
+        "events:DescribeRule",
+        "events:ListTargetsByRule",
+        "events:TagResource"
+      ],
+      "Resource": [ "*" ],
+      "Effect": "Allow"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$ACCOUNT"
+        }
+      },
+      "Action": [
+        "rds:Add*",
+        "rds:AuthorizeDBSecurityGroupIngress",
+        "rds:BacktrackDBCluster",
+        "rds:Copy*",
+        "rds:Create*",
+        "rds:Describe*",
+        "rds:Download*",
+        "rds:EnableHttpEndpoint",
+        "rds:FailoverDBCluster",
+        "rds:FailoverGlobalCluster",
+        "rds:ListTagsForResource",
+        "rds:Start*"
+      ],
+      "Resource": [ "*" ],
+      "Effect": "Allow"
+    }
+  ]
+}

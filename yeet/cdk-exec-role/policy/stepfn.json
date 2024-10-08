@@ -1,0 +1,19 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$ACCOUNT"
+        }
+      },
+      "Action": [
+        "states:CreateStateMachine",
+        "states:DescribeStateMachine",
+        "states:TagResource"
+      ],
+      "Resource": [ "*" ],
+      "Effect": "Allow"
+    }
+  ]
+}

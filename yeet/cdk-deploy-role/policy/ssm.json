@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$ACCOUNT"
+        }
+      },
+      "Action": [
+        "ssm:GetParameter",
+        "ssm:GetParameters"
+      ],
+      "Resource": "arn:aws:ssm:$REGION:$ACCOUNT:parameter/cdk/tinstafl-$EXTERNAL_ID/version",
+      "Effect": "Allow"
+    }
+  ]
+}

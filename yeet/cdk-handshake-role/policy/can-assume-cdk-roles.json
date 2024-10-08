@@ -1,0 +1,21 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Condition": {
+        "StringEquals": {
+          "aws:PrincipalAccount": "$ACCOUNT"
+        }
+      },
+      "Action": "sts:AssumeRole",
+      "Resource": [
+        "arn:aws:iam::$ACCOUNT:role/tinstafl-deploy-$EXTERNAL_ID",
+        "arn:aws:iam::$ACCOUNT:role/tinstafl-exec-$EXTERNAL_ID",
+        "arn:aws:iam::$ACCOUNT:role/tinstafl-assets-$EXTERNAL_ID",
+        "arn:aws:iam::$ACCOUNT:role/tinstafl-images-$EXTERNAL_ID",
+        "arn:aws:iam::$ACCOUNT:role/tinstafl-lookup-$EXTERNAL_ID"
+      ],
+      "Effect": "Allow"
+    }
+  ]
+}
