@@ -1,0 +1,16 @@
+{
+  "host": {
+    "account": "351619759866"
+  },
+  "synthesizer": {
+    "name": "default",
+    "account": "changeme",
+    "region": "us-west-2",
+    "externalId": "changeme",
+    "subscriberRoleArn": "arn:aws:iam::351619759866:role/tinstafl/default/subscriber/changeme",
+    "releases": [ "all", "yeet", "saasy" ],
+    "cdk": {
+      "version": "21"
+    }
+  }
+}
